@@ -16,7 +16,7 @@ config/features=PackedStringArray("4.5", "GL Compatibility")
 
 [display]
 
-window/stretch/scale=3.5
+window/stretch/scale=4.0
 
 [editor_plugins]
 
