@@ -504,3 +504,9 @@ layer_0/tile_data = PackedInt32Array(524274, 0, 1, 589810, 0, 2, 655346, 0, 3, 5
 
 [node name="Player" parent="." instance=ExtResource("2_x25rp")]
 position = Vector2(29, 72)
+
+[node name="RemoteTransform2D" type="RemoteTransform2D" parent="Player"]
+remote_path = NodePath("../../Camera2D")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(29, 72)
