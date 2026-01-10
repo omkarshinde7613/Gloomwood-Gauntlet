@@ -1,4 +1,4 @@
-[gd_scene load_steps=55 format=3 uid="uid://dq16idmo17xut"]
+[gd_scene load_steps=56 format=3 uid="uid://dq16idmo17xut"]
 
 [ext_resource type="Script" uid="uid://bkebgwcqhlm13" path="res://Character/player.gd" id="1_3c51y"]
 [ext_resource type="Texture2D" uid="uid://dlkhtkukq5x11" path="res://Legacy-Fantasy - High Forest 2.3/Character/Idle/Idle-Sheet.png" id="1_6ele1"]
@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://barldnotfmbod" path="res://Legacy-Fantasy - High Forest 2.3/Character/Jump-Start/Jump-Start-Sheet.png" id="4_cyipv"]
 [ext_resource type="Texture2D" uid="uid://bvbhu1jjeu68c" path="res://Legacy-Fantasy - High Forest 2.3/Character/Jumlp-All/Jump-All-Sheet.png" id="5_76vsb"]
 [ext_resource type="Texture2D" uid="uid://c0apfcibdma4b" path="res://Legacy-Fantasy - High Forest 2.3/Character/Run/Run-Sheet.png" id="6_crn8y"]
+[ext_resource type="Script" uid="uid://das6xmsd7apeq" path="res://Character/CharacterStateMachine.gd" id="7_cyipv"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_8qfpo"]
 atlas = ExtResource("1_6ele1")
@@ -478,5 +479,8 @@ libraries = {
 tree_root = SubResource("AnimationNodeStateMachine_xj0yq")
 anim_player = NodePath("../AnimationPlayer")
 parameters/Move/blend_position = 0.025
+
+[node name="CharacterStateMachine" type="Node" parent="."]
+script = ExtResource("7_cyipv")
 
 [connection signal="animation_finished" from="AnimatedSprite2D" to="." method="_on_animated_sprite_2d_animation_finished"]
